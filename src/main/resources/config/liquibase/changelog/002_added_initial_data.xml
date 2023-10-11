@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="002_added_initial_data" author="bakhtiyargil">
+
+        <!-- Initial Data -->
+        <insert tableName="employees">
+            <column name="id" valueComputed="employee_seq.nextval"/>
+            <column name="name" value="Baxtiyar"/>
+            <column name="surname" value="Karimov"/>
+            <column name="age" value="21"/>
+        </insert>
+        <insert tableName="employees">
+            <column name="id" valueComputed="employee_seq.nextval"/>
+            <column name="name" value="Neymar"/>
+            <column name="surname" value="Junior"/>
+            <column name="age" value="21"/>
+        </insert>
+        <insert tableName="employees">
+            <column name="id" valueComputed="employee_seq.nextval"/>
+            <column name="name" value="Wayne"/>
+            <column name="surname" value="Rooney"/>
+            <column name="age" value="21"/>
+        </insert>
+        <!--USER DATA -->
+        <insert tableName="users">
+            <column name="id" valueComputed="user_sequence.nextval"/>
+            <column name="username" value="intern"/>
+            <column name="password" value="$2a$10$ctxphkXCYlA00omwtvtHIu8yOTOvtctWz/Ycv/IJMRj.mjR1ZXW1K"/>
+            <column name="role" value="ROLE_ADMIN"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
